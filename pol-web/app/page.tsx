@@ -4,7 +4,8 @@ export default function Home() {
   return (
     <div>
       <h1>Polygon Web</h1>
-      <p>ああああああ</p>
+      <p>ああああああいいいいいいい</p>
+
     </div>
   );
 }
