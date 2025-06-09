@@ -11,10 +11,10 @@
     font-size: 20px;
   }
   .login{
-    font-size: 25px;
-    position: fixed;
+    font-size: 20px;
+    position: fixed; //ログインボタン
     top: 13px;
-    right: 200px;
+    right: 120px;
   }
   nav {
     margin-left: auto;
@@ -32,8 +32,12 @@
     }
   }
 }
-
-
+.body{
+  .form{
+  margin: 10px;
+  left: 16px;
+  }
+}
 
   .header {
     position: initial;
@@ -49,9 +53,9 @@
   padding: 10px 5px 0 5px;
   display: none;
   cursor: pointer;
-  position: fixed;
+  position: fixed; //Menuボタン
   top: 13px;
-  left: 130px;
+  left: 13px;
   span {
     background-color: white;
     width: 30px;
@@ -103,7 +107,7 @@
   }
   .drawerMenu {
     width: 180px;
-    position: fixed;
+    position: fixed; //メニューの背景
     top: 0;
     ul {
       width: 90%;
@@ -131,10 +135,10 @@
   .subTitle {
     font-size: 15px;
   }
-  .close {
+  .close { //closeボタン
     cursor: pointer;
     margin-top: 28px;
-    padding-right: 5px;
+    padding-right: 125px;
     span {
       background-color: white;
       width: 30px;
@@ -155,4 +159,12 @@
       font-size: 11px;
       padding-right: 1px;
     }
+  }
+  .search{
+    margin: 10px;
+    font-size: 12px;
+    position:fixed;
+    top:4px;
+    right:220px;
+
   }
