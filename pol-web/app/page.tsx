@@ -23,17 +23,27 @@ export default function Home() {
   */
 import styles from "./index.module.scss";
 import Link from "next/link";
-import React, {useState} from "react"
+import React, {useState} from "react";
+import { useRouter } from 'next/navigation';
 export default function Home() {
   const [openMenu, setOpenMenu] = useState(false);
   const menuFunction = () => {
     setOpenMenu(!openMenu);
   }
+  const [query, setQuery] = useState(''); //ここから検索
+  const router = useRouter();
+
+  const handleSearch = () => {
+    if (query.trim()) {
+      router.push(`/search?query=${encodeURIComponent(query)}`);
+    }
+  };  
+  //ここまで検索
   return (
     <React.Fragment>
       <header id="header" className={styles.header}>
         <div className={styles.logo}>
-          <Link href="/page">
+          <Link href="/">
             Polygon Web
           </Link>
           
@@ -78,6 +88,16 @@ export default function Home() {
           </li>
         </ul>
       </div>
+
+      <div className={styles.search}>
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        className="border border-gray-400 rounded-lg p-2"
+      />
+      <button onClick={handleSearch} className="ml-4 bg-gray-700 hover:bg-gray-200 text-white py-2 px-4 border border-gray-50 rounded">検索</button>
+    </div>
     </React.Fragment>
   )
 }
