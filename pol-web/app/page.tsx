@@ -1,47 +1,24 @@
 "use client";
-/*
-import Image from "next/image";
-import Link from 'next/link';
 
-export default function Home() {
-  return (
-    <div>
-      <h1>Polygon Web</h1>
-      <p>ああああああいいいいいいい</p>
-      <li>
-        <Link href="/auther">
-        auther 1
-        </Link>
-        <Link href="./component/header/index.tsx">
-        index 1
-        </Link>
-      </li>
-
-    </div>
-  );
-}
-  */
 import styles from "./index.module.scss";
 import Link from "next/link";
-import React, {useState} from "react"
+import React, { useState } from "react";
+import Header from "./component/header/Header";
+
 export default function Home() {
   const [openMenu, setOpenMenu] = useState(false);
   const menuFunction = () => {
     setOpenMenu(!openMenu);
-  }
+  };
   return (
     <React.Fragment>
+      <Header />
       <header id="header" className={styles.header}>
         <div className={styles.logo}>
-          <Link href="/page">
-            Polygon Web
-          </Link>
-          
+          <Link href="/page">Polygon Web</Link>
         </div>
         <div className={styles.login}>
-          <Link href="/login">
-          ログイン
-          </Link>
+          <Link href="/login">ログイン</Link>
         </div>
         <div className={styles.container}>
           <div className={styles.humburger} onClick={() => menuFunction()}>
@@ -51,7 +28,9 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <div className={`${styles.drawerMenu} ${openMenu ? styles.open : undefined}`}>
+      <div
+        className={`${styles.drawerMenu} ${openMenu ? styles.open : undefined}`}
+      >
         <ul>
           <div className={styles.close} onClick={() => menuFunction()}>
             <span></span>
@@ -60,8 +39,8 @@ export default function Home() {
           </div>
           <li>
             <Link href="/">
-                <p className={styles.mainTitle}>メニュー</p>
-                <p className={styles.subTitle}>サブメニュー</p>
+              <p className={styles.mainTitle}>メニュー</p>
+              <p className={styles.subTitle}>サブメニュー</p>
             </Link>
           </li>
           <li>
@@ -79,6 +58,5 @@ export default function Home() {
         </ul>
       </div>
     </React.Fragment>
-  )
+  );
 }
-
