@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///D:/User/habanagi/github/%E5%A4%A7%E5%AD%A6/polygon-web/pol-web/app/login/auth/page.tsx"],"sourcesContent":["\"use client\"; // これを追加\r\n\r\nimport { useState, FormEvent } from \"react\"; // FormEventをインポート\r\nimport {\r\n  createUserWithEmailAndPassword,\r\n  signInWithEmailAndPassword,\r\n  // ... その他のFirebase関数\r\n} from \"firebase/auth\";\r\n// ... 以下のコード\r\n"],"names":[],"mappings":";AAAA,cAAc,QAAQ;;CAQtB,aAAa","debugId":null}}]
+}
