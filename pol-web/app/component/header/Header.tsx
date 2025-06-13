@@ -15,29 +15,40 @@ const Header = () => {
     <header id="header" className={styles.header}>
       <div className={styles.container}>
         <div className={styles.leftContainer}>
-          <div className={styles.burgermenu}>
-            <Link href="/login">Menu</Link>
+          <div className={styles.hamburger}>
+            <div className={styles.bar}></div>
+            <div className={styles.bar}></div>
+            <div className={styles.bar}></div>
           </div>
           <div className={styles.logo}>
-            <Link href="/page">Polygon Web</Link>
-          </div>
-          <div className={styles.searchBox}>
-            <div className={styles.searchIcon}>
-              <FaSearch size={13} />
-            </div>
-            <input
-              type="text"
-              placeholder="Search..."
-              autoComplete="off"
-              autoCorrect="off"
-              data-from-type="other"
+            <img
+              src="/favicon.ico"
+              alt="Polygon Web Logo"
+              className={styles.favicon}
+              width={24}
+              height={24}
             />
+            <Link href="/page">
+              <p>Polygon Web</p>
+            </Link>
           </div>
         </div>
-        <div className={styles.rightContainer}>
-          <div className={styles.login}>
-            <Link href="/login">Login</Link>
+        <div className={styles.searchBox}>
+          <div className={styles.searchIcon}>
+            <FaSearch size={18} />
           </div>
+          <input
+            type="text"
+            placeholder="Search..."
+            autoComplete="off"
+            autoCorrect="off"
+            data-from-type="other"
+          />
+        </div>
+        <div className={styles.rightContainer}>
+          <Link href="/login">
+            <div className={styles.login}>ログイン</div>
+          </Link>
         </div>
       </div>
     </header>

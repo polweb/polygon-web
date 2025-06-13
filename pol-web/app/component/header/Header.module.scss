@@ -1,59 +1,106 @@
-$border-color: #878787;
-
+$border-color: #b8b8b8;
+$text-color: #202020;
+$theme-color: #3f51b5;
 .header {
   width: 100%;
-  height: 40px;
+  height: 60px;
   border-bottom: 1px solid $border-color;
   padding: 0 10px;
-
   .container {
     display: flex;
     height: 100%;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 
     .leftContainer {
-      width: 70%;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 10px;
       position: relative;
-
-      .searchBox {
-        flex: 1 1 0;
-        max-width: 400px;
-        height: 30px;
-        border-radius: 30px;
-        padding: 0 10px;
+      .hamburger {
+        margin-left: 5px;
+        width: 18px;
+        height: 100%;
+        .bar {
+          width: 100%;
+          height: 2px;
+          transform: scaleY(0.5) translateY(1px);
+          background-color: $text-color;
+          margin: 5px 0;
+          background-color: #4c4c4c;
+        }
+      }
+      .logo {
         display: flex;
+        margin-left: 7px;
         align-items: center;
-        background: #eeeeee;
-        margin: 0 auto;
-
-        input {
-          width: 95%;
-          height: 100%;
-          border: none;
-          outline: none;
-          background-color: transparent;
-          color: #000;
-          &::placeholder {
-            font-size: small;
-          }
+        gap: 7px;
+        img {
+          width: 30px;
+          height: 30px;
         }
-
-        .searchIcon {
-          text-align: center;
-          width: 5%;
-          color: $border-color;
-          cursor: pointer;
+        p {
+          font-size: 20px;
         }
+      }
+    }
+
+    .searchBox {
+      position: absolute; // 追加
+      left: 50%; // 追加
+      top: 50%; // 追加
+      transform: translate(-50%, -50%); // 追加
+      max-width: 600px;
+      width: 100%;
+      height: 40px;
+      border-radius: 30px;
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+      background: #eeeeee;
+      margin: 0; // 修正
+
+      @media (max-width: 608px) {
+        width: auto; // 小さい画面では幅を自動調整
+        max-width: calc(100% - 200px); // 左右コンテナ用の余白を確保
+      }
+
+      input {
+        width: 95%;
+        height: 100%;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: $text-color;
+        font-size: medium;
+        &::placeholder {
+          font-size: medium;
+        }
+      }
+
+      .searchIcon {
+        text-align: center;
+        margin-left: 5px;
+        width: 5%;
+        color: $border-color;
+        cursor: pointer;
       }
     }
 
     .rightContainer {
       display: flex;
+      .login {
+        width: 100px;
+        height: 37px;
+        text-align: center;
+        line-height: 38px;
+        color: white;
+        border-radius: 25px;
+        font-size: medium;
+        background-color: $theme-color;
+      }
     }
   }
 }

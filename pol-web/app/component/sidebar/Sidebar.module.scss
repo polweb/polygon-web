@@ -1,0 +1,78 @@
+$border-color: #b8b8b8;
+$text-color: #202020;
+$sidebar-background: #e6e6e6;
+.humburger {
+  position: absolute;
+
+  color: white;
+  padding: 10px 5px 0 5px;
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 13px;
+  left: 130px;
+  span {
+    background-color: white;
+    width: 30px;
+    height: 1px;
+    display: block;
+    margin-bottom: 7px;
+    &:nth-child(1) {
+      width: 20px;
+      margin-left: 10px;
+    }
+  }
+  p {
+    font-size: 13px;
+    margin-top: -4px;
+    margin-bottom: 5px;
+  }
+}
+.drawerMenu {
+  color: $text-color;
+  width: 0;
+  background-color: white;
+  border-right: 1px solid $border-color;
+  padding: 12px;
+  transition: 0.5s;
+  width: 180px;
+  height: 100vh;
+  opacity: 0;
+  z-index: -100;
+  &.open {
+    position: fixed;
+    width: 180px;
+    height: 100vh;
+    opacity: 1;
+    z-index: 100;
+  }
+
+  .mainContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $border-color;
+    .homeButton {
+      padding-left: 5px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      .homeButtonText {
+        margin-left: 10px;
+        font-size: 11px;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .mainTitle {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+  .subTitle {
+    font-size: 11px;
+  }
+}
