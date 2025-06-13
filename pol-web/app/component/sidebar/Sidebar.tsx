@@ -5,20 +5,22 @@ import React, { useState } from "react";
 import styles from "./Sidebar.module.scss"; // Adjust the path as necessary
 import { FaHome, FaFire } from "react-icons/fa"; // Importing a search icon from react-icons
 
-const Sidebar = () => {
-  const [openMenu, setOpenMenu] = useState(false);
+interface SidebarProps {
+  isOpen?: boolean;
+}
 
+const Sidebar = ({ isOpen }: SidebarProps) => {
   return (
     <React.Fragment>
       <div className={styles.sidebar}></div>
-      <div className={`${styles.drawerMenu} ${styles.open}`}>
+      <div className={`${styles.drawerMenu} ${isOpen ? styles.open : ""}`}>
         <ul>
           <li>
             <div className={styles.mainContent}>
               <div className={styles.homeButton}>
                 <Link href="/">
                   <span className={styles.favicon}>
-                    <FaHome size={20} color="#555555" />
+                    <FaHome size={25} color="#555555" />
                   </span>
                 </Link>
                 <p className={styles.homeButtonText}>ホーム</p>
@@ -26,7 +28,7 @@ const Sidebar = () => {
               <div className={styles.homeButton}>
                 <Link href="/">
                   <span className={styles.favicon}>
-                    <FaFire size={20} color="#555555" />
+                    <FaFire size={25} color="#555555" />
                   </span>
                 </Link>
                 <p className={styles.homeButtonText}>急上昇</p>

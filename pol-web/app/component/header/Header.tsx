@@ -5,21 +5,28 @@ import React, { useState } from "react";
 import styles from "./Header.module.scss"; // Adjust the path as necessary
 import { FaSearch } from "react-icons/fa"; // Importing a search icon from react-icons
 
-const Header = () => {
-  const [openMenu, setOpenMenu] = useState(false);
-  const menuFunction = () => {
-    setOpenMenu(!openMenu);
-  };
+interface HeaderProps {
+  openMenu?: boolean;
+  toggleMenu?: () => void;
+}
 
+const Header = ({ openMenu, toggleMenu }: HeaderProps) => {
   return (
     <header id="header" className={styles.header}>
       <div className={styles.container}>
         <div className={styles.leftContainer}>
-          <div className={styles.hamburger}>
+          <label className={styles.hamburger} tabIndex={0}>
+            <input
+              type="checkbox"
+              checked={openMenu}
+              onChange={toggleMenu}
+              style={{ display: "none" }}
+              aria-label="メニューを開く"
+            />
             <div className={styles.bar}></div>
             <div className={styles.bar}></div>
             <div className={styles.bar}></div>
-          </div>
+          </label>
           <div className={styles.logo}>
             <img
               src="/favicon.ico"
