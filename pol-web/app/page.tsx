@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Header from "./component/header/Header";
 import Sidebar from "./component/sidebar/Sidebar";
+import Card from "./component/article/Card"; // Assuming you have a Card component for articles
 
 export default function Home() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -15,8 +16,11 @@ export default function Home() {
       <Sidebar isOpen={openMenu} />
       <main className={styles.main}>
         <div className={styles.container}>
-          <h1>Welcome to Polygon Web</h1>
-          <p>This is the home page of the Polygon Web application.</p>
+          <div className={styles.Cards}>
+            <Card />
+            <Card />
+            <Card />
+          </div>
         </div>
       </main>
     </React.Fragment>

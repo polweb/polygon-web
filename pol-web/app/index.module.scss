@@ -1,5 +1,14 @@
 .main {
   display: block;
   text-align: center;
-  padding-top: 70px;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-top: 15px;
+  .container {
+    .Cards {
+      display: flex;
+      gap: 20px;
+      overflow: hidden; // 追加: はみ出た部分を隠す
+    }
+  }
 }
