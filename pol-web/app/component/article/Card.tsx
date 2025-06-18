@@ -8,13 +8,22 @@ import { FaSearch } from "react-icons/fa"; // Importing a search icon from react
 const Card = () => {
   return (
     <div className={styles.card}>
-      <Link href="/article/1">
-        <h2 className={styles.title}>記事タイトル</h2>
-      </Link>
-      <p className={styles.description}>この記事の概要がここに入ります。</p>
-      <div className={styles.footer}>
-        <span className={styles.author}>著者名</span>
-        <span className={styles.date}>2023年10月1日</span>
+      <img
+        src="/images/mountain.jpg"
+        alt="Article Image"
+        className={styles.image}
+      />
+      <div className={styles.info}>
+        <Link href="/article/1">
+          <h2 className={styles.title}>記事タイトル</h2>
+        </Link>
+        <p className={styles.description}>
+          この記事の概要がここに入ります。この記事の概要がここに入ります。この記事の概要がここに入ります。この記事の概要がここに入ります。この記事の概要がここに入りま...
+        </p>
+        <div className={styles.footer}>
+          <span className={styles.author}>著者名 / </span>
+          <span className={styles.date}>2023年10月1日</span>
+        </div>
       </div>
     </div>
   );
