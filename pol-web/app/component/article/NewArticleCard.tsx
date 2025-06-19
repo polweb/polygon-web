@@ -7,7 +7,7 @@ import Link from "next/link";
 const NewArticleCard = () => {
   return (
     <div className={styles.card}>
-      <Link href="/article/tierlist">
+      <Link href="/articles">
         <img
           src="/images/mountain.jpg"
           alt="新しい記事"
