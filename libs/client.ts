@@ -33,3 +33,26 @@ export const getDetail = async (contentId: string) => {
   });
   return article;
 };
+
+type TierItem = {
+    id: string;
+    name: string;
+    tier: string;
+    description?: string;
+    image?: { url: string };
+};
+
+type TierListResponse = {
+    contents: TierItem[];
+    totalCount: number;
+    offset: number;
+    limit: number;
+};
+
+export async function getTierItems() {
+  const data = await client.get({
+    endpoint: 'tiers',
+    queries: { limit: 100 }
+  });
+  return data;
+}
