@@ -37,6 +37,7 @@ export const getDetail = async (contentId: string) => {
 type TierItem = {
     id: string;
     name: string;
+    price:string;
     tier: string;
     description?: string;
     image?: { url: string };
@@ -52,6 +53,14 @@ type TierListResponse = {
 export async function getTierItems() {
   const data = await client.get({
     endpoint: 'tiers',
+    queries: { limit: 100 }
+  });
+  return data;
+}
+
+export async function getFoodTierItems() {
+  const data = await client.get({
+    endpoint: 'foodtier',
     queries: { limit: 100 }
   });
   return data;
