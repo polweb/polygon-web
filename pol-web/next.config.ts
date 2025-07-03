@@ -5,6 +5,16 @@ const nextConfig: NextConfig = {
     appIsrStatus: false,
   },
   /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.microcms-assets.io',
+        port: '',
+        pathname: '/assets/**',
+      },
+    ],
+  },
 };
 
 export default nextConfig;
