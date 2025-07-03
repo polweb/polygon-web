@@ -4,7 +4,7 @@ $sidebar-background: #e6e6e6;
 
 .drawerMenu {
   color: $text-color;
-  width: 220px;
+  width: 250px;
   background-color: white;
   border-right: 1px solid $border-color;
   padding: 12px;
@@ -14,7 +14,6 @@ $sidebar-background: #e6e6e6;
   position: fixed;
   top: 60px;
   left: 0;
-  box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.2);
   transform: translateX(-100%);
   &.open {
     transform: translateX(0);

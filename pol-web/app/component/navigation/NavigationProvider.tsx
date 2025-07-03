@@ -34,7 +34,7 @@ export default function NavigationProvider({
   return (
     <NavigationContext.Provider value={{ openMenu, toggleMenu }}>
       <Header openMenu={openMenu} toggleMenu={toggleMenu} />
-      <Sidebar isOpen={openMenu} />
+      <Sidebar isOpen={!openMenu} />
       {children}
     </NavigationContext.Provider>
   );
