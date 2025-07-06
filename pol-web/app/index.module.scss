@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .header{
   display: flex;
   align-items: center;
@@ -99,12 +100,26 @@
       margin-top: 25px;
     }
   }
+=======
+.main {
+  display: block;
+  text-align: center;
+  margin-left: 280px;
+  max-width: 1200px;
+  padding-top: 15px;
+
+>>>>>>> 121884329d2ea973b146b12261440b8870302c77
   .container {
-    margin: 0 0 0 auto;
-    .humburger {
-      display: block;
+    .Cards {
+      display: flex;
+      gap: 20px;
+      overflow: hidden; // 追加: はみ出た部分を隠す
+    }
+    .newArticleCards {
+      flex: 1;
     }
   }
+<<<<<<< HEAD
   .drawerMenu {
     width: 180px;
     position: fixed; //メニューの背景
@@ -168,3 +183,14 @@
     right:220px;
 
   }
+=======
+  .mainBox {
+    display: flex;
+    gap: 20px;
+  }
+  .rightBar {
+    width: 400px;
+    flex-shrink: 0;
+  }
+}
+>>>>>>> 121884329d2ea973b146b12261440b8870302c77
