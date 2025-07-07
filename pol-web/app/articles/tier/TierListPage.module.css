@@ -1,0 +1,51 @@
+.container {
+    width: 100%;
+    margin-left: 260px;
+    margin-right: auto;
+    padding: 1rem;
+    max-width: 1200px;
+}
+
+.pageTitle {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align:center;
+}
+
+.tierSection {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #e5e7eb; /* 枠線を明確化 */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.tierTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.tierTitleS { color: #dc2626; }
+.tierTitleA { color: #f97316; }
+.tierTitleB { color: #3b82f6; }
+.tierTitleC { color: #22c55e; }
+
+
+.tierGrid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (min-width: 640px) {
+    .tierGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 768px) {
+    .tierGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+    .tierGrid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}

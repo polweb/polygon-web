@@ -5,7 +5,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import styles from './TierItemCard.module.css';
 // page.tsxで定義した型を再度定義します
 type TierItem = {
     id: string;
@@ -24,7 +24,7 @@ export default function TierItemCard({ item }: { item: TierItem }) {
     const CardContent = () => (
     <>
         {item.image && (
-        <div className="relative w-20 h-20 mb-2">
+        <div className={styles.imageContainer}>
             <Image
             src={item.image.url}
             alt={item.name}
@@ -34,10 +34,10 @@ export default function TierItemCard({ item }: { item: TierItem }) {
         />
         </div>
     )}
-    <p className="font-medium text-lg">{item.name}</p>
+    <p className={styles.name}>{item.name}</p>
     {isHovering && item.description && (
         <div
-            className="absolute top-0 left-full ml-2 w-64 p-3 bg-gray-800 text-white text-sm rounded-lg shadow-lg z-10"
+            className={styles.descriptionPopup}
             dangerouslySetInnerHTML={{ __html: item.description }}
         />
     )}

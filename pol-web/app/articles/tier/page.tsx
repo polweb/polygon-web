@@ -1,7 +1,7 @@
 import { getTierItems } from "@/libs/client";
 import Image from "next/image"; // 画像を使用する場合
 import TierItemCard from "./TierItemCard";
-
+import styles from './TierListPage.module.css';
 export const revalidate = 60; // ISR (Incremental Static Regeneration) を設定する場合 (任意)
 
 export default async function TierListPage() {
@@ -31,9 +31,9 @@ const groupedTierItems = tierItems.reduce((acc: GroupedItems, item: TierItem) =>
     const tierOrder = ['S', 'A', 'B', 'C', 'Uncategorized']; // 必要に応じて調整
 
     return (
-    <div className="container mx-auto p-4">
-    <h1 className="text-3xl font-bold mb-8 text-center">【富山県立大学】最強教養科目ランキング|Tier表【富山県立大学】</h1>    
-    <h2 className="text-3xl font-bold mb-8 text-center">教養科目ティア表</h2>
+    <div className={styles.container}>
+    <h1 className={styles.pageTitle}>【富山県立大学】最強教養科目ランキング|Tier表【富山県立大学】</h1>    
+    <h2 className={styles.pageTitle}>教養科目ティア表</h2>
 
     {tierOrder.map((tier) => {
         const items = groupedTierItems[tier];
@@ -41,11 +41,11 @@ const groupedTierItems = tierItems.reduce((acc: GroupedItems, item: TierItem) =>
           return null; // そのティアレベルにアイテムがない場合は表示しない
         }
         return (
-            <div key={tier} className="mb-8 p-4 border rounded-lg shadow-md">
-            <h3 className={`text-2xl font-semibold mb-4 ${tier === 'S' ? 'text-red-600' : tier === 'A' ? 'text-orange-500' :  tier === 'B' ? 'text-blue-500' :  tier === 'C' ? 'text-green-500' : ''}`}>
+            <div key={tier} className={styles.tierSection}>
+            <h3 className={`${styles.tierTitle} ${styles[`tierTitle${tier}`]}`}>
                 {tier} ティア
             </h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <div className={styles.tierGrid}>
                 {items.map((item) => (
                     <TierItemCard key={item.id} item={item} />
                 ))}
