@@ -24,7 +24,7 @@ const articleList: Article[] = [
     title: "最強教養科目ランキング|Tier表【富山県立大学】",
     description: "富山県立大学の教養科目をランキング形式で紹介します。",
     userName: "Polygon",
-    userImage: "favicon.ico",
+    userImage: "icon0.svg",
     backgroundImage:
       "https://www.pu-toyama.ac.jp/tpu/wp-content/themes/toyama_2023/images_special/new_universitybuilding/13.jpg",
     date: "2024-06-01",
@@ -34,7 +34,7 @@ const articleList: Article[] = [
     title: "学食ランキング【富山県立大学】",
     description: "富山県立大学の学食をランキング形式で紹介します。",
     userName: "Polygon",
-    userImage: "favicon.ico",
+    userImage: "icon0.svg",
     backgroundImage:
       "https://www.sophia.ac.jp/assets/uploads/2022/11/%E9%A3%9F%E5%A0%82-1024x576.jpg",
     date: "2024-06-02",
