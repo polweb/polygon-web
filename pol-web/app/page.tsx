@@ -28,7 +28,7 @@ const articleList: Article[] = [
     backgroundImage:
       "https://www.pu-toyama.ac.jp/tpu/wp-content/themes/toyama_2023/images_special/new_universitybuilding/13.jpg",
     date: "2024-06-01",
-    path: "/tier",
+    path: "/articles/tier",
   },
   {
     title: "学食ランキング【富山県立大学】",
@@ -38,7 +38,7 @@ const articleList: Article[] = [
     backgroundImage:
       "https://www.sophia.ac.jp/assets/uploads/2022/11/%E9%A3%9F%E5%A0%82-1024x576.jpg",
     date: "2024-06-02",
-    path: "/articles/2",
+    path: "/articles/foodtier",
   },
   {
     title: "test",

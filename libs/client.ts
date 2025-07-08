@@ -11,7 +11,7 @@ if (!process.env.SERVICE_DOMAIN) {
 }
 
 if (!process.env.API_KEY) {
-  throw new Error("SERVICE_DOMAIN is required");
+  throw new Error("API_KEY is required");
 }
 
 export const client = createClient({
