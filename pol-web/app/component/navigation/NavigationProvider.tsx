@@ -3,6 +3,7 @@
 import React, { useState, createContext, useContext } from "react";
 import Header from "../header/Header";
 import Sidebar from "../sidebar/Sidebar";
+import styles from "./NavigationProvider.module.css";
 
 // ナビゲーション状態コンテキスト
 type NavigationContextType = {
@@ -35,7 +36,7 @@ export default function NavigationProvider({
     <NavigationContext.Provider value={{ openMenu, toggleMenu }}>
       <Header openMenu={openMenu} toggleMenu={toggleMenu} />
       <Sidebar isOpen={!openMenu} />
-      {children}
+      <main className={styles.mainContent}>{children}</main>
     </NavigationContext.Provider>
   );
 }

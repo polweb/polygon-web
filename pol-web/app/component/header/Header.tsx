@@ -29,9 +29,9 @@ const Header = ({ openMenu, toggleMenu }: HeaderProps) => {
           </label>
           <div className={styles.logo}>
             <img
-              src="/favicon.ico"
+              src="/icon0.svg"
               alt="Polygon Web Logo"
-              className={styles.favicon}
+              className={styles.logoIcon}
               width={24}
               height={24}
             />
