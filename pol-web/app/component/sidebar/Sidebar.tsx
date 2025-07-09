@@ -27,22 +27,22 @@ const menuItems = [
   },
   {
     label: "大学生協",
-    href: "https://www.ucoop.or.jp/",
+    href: "https://www.pu-toyama.coop/",
     icon: <FaShoppingCart size={22} color="#555555" />,
   },
   {
     label: "Webclass",
-    href: "https://webclass.u-toyama.ac.jp/",
+    href: "https://tpuwcwebsv.pu-toyama.ac.jp/webclass/login.php",
     icon: <FaNewspaper size={22} color="#555555" />,
   },
   {
     label: "履修登録システム",
-    href: "https://risyu.u-toyama.ac.jp/",
+    href: "https://rishuweb.pu-toyama.ac.jp/",
     icon: <FaCloudSun size={22} color="#555555" />,
   },
   {
     label: "大学図書館",
-    href: "https://www.lib.u-toyama.ac.jp/",
+    href: "https://www.pu-toyama.ac.jp/library/",
     icon: <FaBook size={22} color="#555555" />,
   },
   {
@@ -57,7 +57,7 @@ const menuItems = [
   },
   {
     label: "生協公式X",
-    href: "https://x.com/ucoop_jp",
+    href: "https://x.com/TPUcoop?lang=ja",
     icon: <FaTwitter size={22} color="#555555" />,
   },
   {
