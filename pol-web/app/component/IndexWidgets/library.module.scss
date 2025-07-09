@@ -1,0 +1,59 @@
+.card {
+  width: 260px;
+  height: 130px;
+  position: relative;
+  padding: 10px;
+  background-color: rgb(244, 244, 244);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #333; // ダークグレーで可読性を確保
+  z-index: -2;
+  font-weight: bold;
+
+  .header {
+    width: 100%;
+    height: 20px;
+    display: flex;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 22px;
+  opacity: 0.5;
+  z-index: -1;
+  border-radius: 20px;
+  overflow: hidden;
+  pointer-events: none;
+  object-fit: cover;
+  /* はみ出した部分を表示しない */
+  clip-path: inset(0 0 0 0 round 20px);
+}
+
+.openingHours {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 1.1em;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #163245; // 落ち着いたブルー系
+
+  small {
+    color: #888; // グレー系
+    margin-left: -9px;
+    font-size: 0.5em;
+    font-weight: normal;
+  }
+}
