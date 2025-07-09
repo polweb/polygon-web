@@ -38,7 +38,13 @@ const Header = ({ openMenu, toggleMenu }: HeaderProps) => {
             />
             </Link>
             <Link href="/">
-              <p>Polygon Web</p>
+            <img
+              src="/icon1.svg"
+              alt="Polygon Web Name Logo"
+              className={styles.namelogoIcon}
+              width={24}
+              height={24}
+            />
             </Link>
           </div>
         </div>
