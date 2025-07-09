@@ -1,0 +1,159 @@
+.card {
+  width: 260px;
+  height: 130px;
+  position: relative;
+  padding: 10px;
+  background-color: rgb(244, 244, 244);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  .header {
+    width: 100%;
+    height: 40px;
+    display: flex;
+
+    .cardHeader {
+      width: 100%;
+      height: 100%;
+      text-align: left;
+      line-height: 0.8;
+      padding-left: 4px;
+      padding-top: 3px;
+
+      h3 {
+        font-size: 1.0rem;
+        font-weight: bold;
+      }
+
+      h4 {
+        font-size: 0.9rem;
+        margin-top: 4px;
+      }
+    }
+
+    .line_train {
+      width: 4px;
+      height: 90%;
+      background-color: rgb(13, 162, 60);
+    }
+
+    .line_bus {
+      width: 4px;
+      height: 90%;
+      background-color: rgb(0, 123, 255);
+    }
+  }
+
+  .trainTime {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 1em;
+    text-align: left;
+
+
+
+    .left {
+      width: 70%;
+      display: flex;
+
+      .time {
+        font-weight: bold;
+      }
+
+      .destination {
+        margin-left: 5px;
+        color: rgb(55, 55, 55);
+      }
+    }
+
+    .right {
+      .trainType {
+        padding: 2px 8px;
+        border-radius: 8px;
+        border: 1px solid #bdbdbd;
+        font-size: 0.85em;
+        font-weight: 600;
+        display: inline-block;
+      }
+    }
+
+  }
+
+  .minutesParent {
+    display: block;
+
+  }
+
+  .minutesLeft {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: rgb(55, 55, 55);
+    font-weight: bold;
+    align-items: flex-end;
+
+    .hungo {
+      font-size: 0.5em;
+      margin-bottom: 10px;
+    }
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .info {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0.7) 0%,
+        rgba(128, 128, 128, 0.7) 100%);
+    text-align: start;
+    padding: 16px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 0.8rem;
+      margin: 0;
+      margin-bottom: 8px;
+    }
+  }
+
+  &:hover {
+    .info {
+      opacity: 1;
+      transition: 0.3s ease-in-out;
+    }
+  }
+
+  .toggleButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: #eee;
+    border-radius: 16px;
+    padding: 4px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1em;
+  }
+}

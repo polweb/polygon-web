@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, createContext, useContext } from "react";
+import React, { useState, createContext, useContext, useEffect } from "react";
 import Header from "../header/Header";
 import Sidebar from "../sidebar/Sidebar";
 
@@ -28,7 +28,25 @@ export default function NavigationProvider({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [openMenu, setOpenMenu] = useState(false);
+  const [openMenu, setOpenMenu] = useState(true); // 初期値を固定
+
+  useEffect(() => {
+    // クライアントサイドでのみ実行
+    const handleResize = () => {
+      const isWideScreen = window.innerWidth <= 1400;
+      setOpenMenu(isWideScreen);
+    };
+
+    // 初回実行
+    handleResize();
+
+    // リサイズイベントリスナーを追加
+    window.addEventListener("resize", handleResize);
+
+    // クリーンアップ
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const toggleMenu = () => setOpenMenu(!openMenu);
 
   return (

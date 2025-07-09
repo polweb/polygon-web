@@ -40,7 +40,12 @@ const Header = ({ openMenu, toggleMenu }: HeaderProps) => {
             </Link>
           </div>
         </div>
-        <div className={styles.searchBox}>
+        <div className={styles.searchBoxMobile}>
+          <div className={styles.searchIcon}>
+            <FaSearch size={18} />
+          </div>
+        </div>
+        <div className={styles.searchBoxDesk}>
           <div className={styles.searchIcon}>
             <FaSearch size={18} />
           </div>
