@@ -1,3 +1,7 @@
 node_modules/
+<<<<<<< HEAD
+.next/
+=======
 .next/
 .env*.local
+>>>>>>> 121884329d2ea973b146b12261440b8870302c77
