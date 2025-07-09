@@ -6,9 +6,17 @@ $theme-color: #3f51b5;
   width: 100%;
   height: 60px;
   border-bottom: 1px solid $border-color;
+  background-color: #ffffff;
   padding: 0 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+<<<<<<< HEAD
 
+=======
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+>>>>>>> b0f4ea3acbf6761f8f4106c8303fb4cd119ca1af
   .container {
     display: flex;
     height: 100%;
@@ -73,6 +81,14 @@ $theme-color: #3f51b5;
           font-size: 20px;
           font-weight: bold;
           color: rgb(53, 53, 53);
+        }
+        .logoIcon {
+          width: 30px;
+          height: 30px;
+        }
+        .namelogoIcon {
+          width: auto;
+          height: 40px;
         }
       }
     }

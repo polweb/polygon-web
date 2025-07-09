@@ -28,15 +28,23 @@ const Header = ({ openMenu, toggleMenu }: HeaderProps) => {
             <div className={styles.bar}></div>
           </label>
           <div className={styles.logo}>
+            <Link href="/">
             <img
-              src="/favicon.ico"
+              src="/icon0.svg"
               alt="Polygon Web Logo"
-              className={styles.favicon}
+              className={styles.logoIcon}
               width={24}
               height={24}
             />
-            <Link href="/page">
-              <p>Polygon Web</p>
+            </Link>
+            <Link href="/">
+            <img
+              src="/icon1.svg"
+              alt="Polygon Web Name Logo"
+              className={styles.namelogoIcon}
+              width={24}
+              height={24}
+            />
             </Link>
           </div>
         </div>
