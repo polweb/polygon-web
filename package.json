@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "firebase": "^11.10.0",
+    "microcms-js-sdk": "^3.2.0",
+    "sass": "^1.89.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.3"
+  }
+}
