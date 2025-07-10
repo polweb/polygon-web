@@ -10,6 +10,7 @@ import RecentPost from "./component/rightBar/recentPost";
 import NewArticleCard from "./component/article/NewArticleCard";
 import TrainSchedule from "./component/IndexWidgets/TrainSchedule";
 import LibrarySchedule from "./component/IndexWidgets/librarySchedule";
+import Ad from "./component/Ad/ad";
 
 import { readdir, stat } from "fs/promises";
 import path from "path";
@@ -84,7 +85,7 @@ export default function Home() {
               ))}
             </div>
             <div className={styles.rightBar}>
-              <img src="/images/ad.png" alt="広告" className={styles.adImage} />
+              <Ad />
             </div>
           </div>
         </div>
