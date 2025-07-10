@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { createUserWithEmailAndPassword, sendEmailVerification, signOut } from "firebase/auth";
-import { auth, firestore } from "@/libs/firebase";
+import { auth, db } from "@/libs/firebase";
 import { useRouter } from "next/navigation";
 import { doc, setDoc, serverTimestamp } from "firebase/firestore";
 import styles from "../login/login.module.css";
@@ -45,7 +45,7 @@ export default function SignupPage() {
       const user = userCredential.user;
 
       // Firestore にユーザーデータを先に登録
-      await setDoc(doc(firestore, "users", user.uid), {
+      await setDoc(doc(db, "users", user.uid), {
         uid: user.uid,
         email: user.email,
         name,

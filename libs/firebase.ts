@@ -3,23 +3,23 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
 
-// .env.localファイルから環境変数を読み込みます
+// Firebase 設定
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  apiKey: "AIzaSyDS4_26HI8zfirQPpYoHkW8DYCoPNYZlg8",
+  authDomain: "polygon-web-27d8c.firebaseapp.com",
+  projectId: "polygon-web-27d8c",
+  storageBucket: "polygon-web-27d8c.appspot.com",
+  messagingSenderId: "609749509639",
+  appId: "1:609749509639:web:e68809402e36e6c5d6eca2",
+  measurementId: "G-DZVCMT76VB",
 };
 
-// Next.jsのサーバーサイド/クライアントサイド両対応の初期化処理
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+// Firebase 初期化（複数回初期化防止）
+const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 
-const auth = getAuth(app);
-const firestore = getFirestore(app);
-const storage = getStorage(app);
+// Firebase Authentication
+export const auth = getAuth(app);
 
-export { app, auth, firestore, storage };
+// ✅ Firebase Firestore を追加
+export const db = getFirestore(app);
