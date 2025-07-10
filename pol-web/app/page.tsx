@@ -10,7 +10,7 @@ import RecentPost from "./component/rightBar/recentPost";
 import NewArticleCard from "./component/article/NewArticleCard";
 import TrainSchedule from "./component/IndexWidgets/TrainSchedule";
 import LibrarySchedule from "./component/IndexWidgets/librarySchedule";
-import Ad from "./component/Ad/ad";
+import Ad from "./component/ad/ad";
 
 import { readdir, stat } from "fs/promises";
 import path from "path";
