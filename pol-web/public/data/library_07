@@ -1,0 +1,51 @@
+[
+  {
+    "data": [
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "saturday",
+      "closed",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "saturday",
+      "closed",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "normal",
+      "saturday",
+      "closed",
+      "closed",
+      "long",
+      "long",
+      "long",
+      "long",
+      "saturday",
+      "closed",
+      "long",
+      "long",
+      "long",
+      "long"
+    ],
+    "comment": [
+      "21日（月）…海の日",
+      "22日（火）以降の平日…延長開館（8：30～20：00開館）"
+    ]
+  },
+  {
+    "normal": "8:30-19:00",
+    "saturday": "13:00-16:00",
+    "closed": "休館",
+    "to17": "8:30-17:00",
+    "to15": "8:30-15:00",
+    "t1519": "15:00-19:00",
+    "t1517": "15:00-17:00",
+    "long": "8:30-20:00"
+  }
+]

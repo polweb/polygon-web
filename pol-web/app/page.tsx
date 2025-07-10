@@ -8,6 +8,12 @@ import Sidebar from "./component/sidebar/Sidebar";
 import Card from "./component/article/Card";
 import RecentPost from "./component/rightBar/recentPost";
 import NewArticleCard from "./component/article/NewArticleCard";
+import TrainSchedule from "./component/IndexWidgets/TrainSchedule";
+import LibrarySchedule from "./component/IndexWidgets/librarySchedule";
+
+import { readdir, stat } from "fs/promises";
+import path from "path";
+import BusSchedule from "./component/IndexWidgets/BusSchedule";
 
 interface Article {
   title: string;
@@ -56,9 +62,11 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.container}>
           <div className={styles.Cards}>
-            <Card />
-            <Card />
-            <Card />
+            <div className={styles.transferCards}>
+              <TrainSchedule />
+              <BusSchedule />
+            </div>
+            <LibrarySchedule />
           </div>
           <div className={styles.mainBox}>
             <div className={styles.newArticleCards}>
@@ -76,7 +84,7 @@ export default function Home() {
               ))}
             </div>
             <div className={styles.rightBar}>
-              <RecentPost />
+              <img src="/images/ad.png" alt="広告" className={styles.adImage} />
             </div>
           </div>
         </div>

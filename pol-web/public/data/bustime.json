@@ -1,0 +1,86 @@
+{
+  "campus": [
+    {
+      "bus_number": "1便",
+      "is_tue_wed_thu": false,
+      "time": "8:30発"
+    },
+    {
+      "bus_number": "1便",
+      "is_tue_wed_thu": false,
+      "time": "8:35発"
+    },
+    {
+      "bus_number": "2便",
+      "is_tue_wed_thu": false,
+      "time": "10:38発"
+    },
+    {
+      "bus_number": "3便",
+      "is_tue_wed_thu": false,
+      "time": "12:53発"
+    },
+    {
+      "bus_number": "4便",
+      "is_tue_wed_thu": true,
+      "time": "16:13発"
+    },
+    {
+      "bus_number": "便2",
+      "is_tue_wed_thu": false,
+      "time": "18:08発"
+    },
+    {
+      "bus_number": "5便",
+      "is_tue_wed_thu": true,
+      "time": "18:13発"
+    },
+    {
+      "bus_number": "6便",
+      "is_tue_wed_thu": true,
+      "time": "20:20発"
+    }
+  ],
+  "kosugi": [
+    {
+      "bus_number": "1便",
+      "is_tue_wed_thu": false,
+      "time": "8:36発"
+    },
+    {
+      "bus_number": "1便",
+      "is_tue_wed_thu": false,
+      "time": "8:40発"
+    },
+    {
+      "bus_number": "2便",
+      "is_tue_wed_thu": false,
+      "time": "10:45発"
+    },
+    {
+      "bus_number": "3便",
+      "is_tue_wed_thu": false,
+      "time": "13:00発"
+    },
+    {
+      "bus_number": "4便",
+      "is_tue_wed_thu": true,
+      "time": "16:20発"
+    },
+    {
+      "bus_number": "便2",
+      "is_tue_wed_thu": false,
+      "time": "18:20発"
+    },
+    {
+      "bus_number": "5便",
+      "is_tue_wed_thu": true,
+      "time": "18:20発"
+    },
+    {
+      "bus_number": "6便",
+      "is_tue_wed_thu": true,
+      "time": "20:27発"
+    }
+  ]
+}

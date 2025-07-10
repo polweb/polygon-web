@@ -1,9 +1,10 @@
 .container {
     width: calc(100% - 480px);
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 240px;
     padding: 2rem;
     max-width: 1200px;
+    transition: width 1s ease, padding 1s ease;
 }
 
 .pageTitle {
@@ -48,4 +49,11 @@
 }
 @media (min-width: 1024px) {
     .tierGrid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+@media (max-width: 1200px) {
+.container {
+    width: 100%;
+    margin-left: 0px;
+    padding: 2rem 1.5rem;
+}
 }
