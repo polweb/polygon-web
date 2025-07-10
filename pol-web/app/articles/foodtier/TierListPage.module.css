@@ -1,9 +1,10 @@
 .container {
-    width: 100%;
-    margin-left: 260px;
+    width: calc(100% - 480px);
+    margin-left: auto;
     margin-right: auto;
-    padding: 1rem;
+    padding: 2rem;
     max-width: 1200px;
+    transition: width 1s ease, padding 1s ease;
 }
 
 .pageTitle {
@@ -17,7 +18,7 @@
 .tierSection {
     margin-bottom: 2rem;
     padding: 1rem;
-    border: 1px solid #e5e7eb; /* 枠線を明確化 */
+    border: 1px solid #e5e7eb;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
@@ -48,4 +49,11 @@
 }
 @media (min-width: 1024px) {
     .tierGrid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+@media (max-width: 1200px) {
+.container {
+    width: 100%;
+    margin-left: 0px;
+    padding: 2rem 1.5rem;
+}
 }
